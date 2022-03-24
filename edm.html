@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Foodpanda eDM Mar.</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+
         /* Normalized CSS */
         *,
         *::after,
         *::before {
             box-sizing: border-box;
-            font-family: sans-serif;
+            font-family: 'Noto Sans TC', sans-serif;
             font-weight: normal;
             font-style: normal;
             font-stretch: normal;
@@ -25,7 +27,7 @@
         textarea,
         button {
             -webkit-font-smoothing: antialiased;
-            font-family: sans-serif;
+            font-family: 'Noto Sans TC', sans-serif;
         }
 
         body {
@@ -36,6 +38,10 @@
 
         a {
             text-decoration: none;
+        }
+
+        a:visited {
+            color: black;
         }
 
         h1,
@@ -61,6 +67,7 @@
             --blue: #1367e2;
             --orange: #f9d0d4;
             --gray: #333333;
+            --light-gray: #cccccc;
             --white: #ffffff;
             --white-hover: #ffffff90;
         }
@@ -198,7 +205,7 @@
         .banner-text>p {
             text-align: center;
             color: var(--primary);
-            font-weight: 200;
+            font-weight: 300;
         }
 
         .content-wrapper {
@@ -219,7 +226,7 @@
         .column-content>p {
             font-size: 0.875rem;
             line-height: 1.25rem;
-            font-weight: 200;
+            font-weight: 300;
         }
 
         .column-content>h3 {
@@ -324,7 +331,7 @@
             text-align: center;
             font-size: 1.5rem;
             line-height: 2rem;
-            font-weight: 600;
+            font-weight: 800;
             color: var(--white);
             margin-bottom: 1.75rem;
             white-space: nowrap;
@@ -337,7 +344,7 @@
         .sub-title>p {
             text-align: center;
             color: var(--white);
-            font-weight: 200;
+            font-weight: 300;
         }
 
         .event-wrapper {
@@ -371,7 +378,7 @@
         .hl {
             height: 1px;
             width: 100%;
-            background-color: var(--gray);
+            background-color: var(--light-gray);
         }
 
         .event-item-right-item {
@@ -461,6 +468,10 @@
             margin-bottom: 0.75rem;
         }
 
+        .event-item-bottom>h3>span {
+            color: var(--primary);
+        }
+
         .event-item-bottom>p:last-of-type {
             margin-bottom: 0.75rem;
         }
@@ -478,19 +489,14 @@
             font-size: 0.75rem;
             line-height: 1rem;
             color: var(--white);
-            font-weight: 200;
+            font-weight: 300;
         }
 
         .column-event {
             padding: 1.25rem;
         }
 
-        .column-event-item-top {
-            width: 100%;
-        }
-
-        .column-event-item-top>img {
-            background-color: black;
+        .column-event>img {
             border-radius: 1.5rem;
             width: 100%;
         }
@@ -664,6 +670,8 @@
 
             .column-wrapper>img {
                 width: 40%;
+                height: 40%;
+                margin: auto;
             }
 
             .column-content {
@@ -816,13 +824,10 @@
                 padding: 2.5rem;
             }
 
-            .column-event-item-top {
+            .column-event>img {
                 width: 40%;
-            }
-
-            .column-event-item-top>img {
-                height: 100%;
-                object-fit: cover;
+                height: 40%;
+                margin: auto;
             }
 
             .column-event-item-bottom {
@@ -1015,10 +1020,8 @@
                 </div>
                 <!-- 公告3 -->
                 <div class="content-wrapper content-wrapper-vertical event-wrapper column-event">
-                    <div class="column-event-item-top">
-                        <img src="https://whatsticker.online/stickers_asset/ws-pack-5325474inxKWP/c40e25397a2f2.webp"
-                            alt="">
-                    </div>
+                    <img src="https://whatsticker.online/stickers_asset/ws-pack-5325474inxKWP/c40e25397a2f2.webp"
+                        alt="">
                     <div class="column-event-item-bottom">
                         <h2>▶ 商家營業提醒</h2>
                         <p>
@@ -1055,7 +1058,7 @@
                     <div class="event-item-bottom">
                         <h3>
                             秀出新版商家門貼✨就有機會獲得
-                            <span class="text-primary">商家限定好禮</span>
+                            <span>商家限定好禮</span>
                             !
                         </h3>
                         <p>跟著胖胖達一起除舊布新，迎接新年好運🎉</p>
