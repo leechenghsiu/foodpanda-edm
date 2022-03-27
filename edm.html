@@ -5,8 +5,701 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Foodpanda eDM Mar.</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="media.css">
+    <!-- <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css"> -->
+    <style>
+        /* Normalized CSS */
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            outline: none;
+        }
+
+        body,
+        input,
+        select,
+        textarea,
+        button {
+            -webkit-font-smoothing: antialiased;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: #000000;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            border-collapse: separate;
+            border: none;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            margin: auto;
+        }
+
+        .section-wrapper-1 {
+            padding: 0.5rem;
+        }
+
+        .section-container-1 {
+            border-radius: 1.5rem;
+            max-width: 644px;
+            margin: auto;
+        }
+
+        .section-container-1>table:first-child {
+            background-color: #ff2b85;
+            border-top-left-radius: 1.5rem;
+            border-top-right-radius: 1.5rem;
+        }
+
+        .section-container-1>table:nth-child(2),
+        .section-container-1>table:nth-child(3),
+        .section-container-1>table:nth-child(4) {
+            border-left: 0.5px solid #cccccc;
+            border-right: 0.5px solid #cccccc;
+        }
+
+        .section-container-1>table:nth-child(5) {
+            border: 0.5px solid #cccccc;
+            border-top: none;
+            border-bottom-left-radius: 1.5rem;
+            border-bottom-right-radius: 1.5rem;
+        }
+
+        .nav {
+            height: 4rem;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .nav-logo {
+            width: 50%;
+            padding-left: 0.75rem;
+        }
+
+        .nav-logo>img {
+            width: 120px;
+        }
+
+        .nav-action {
+            width: 50%;
+            padding-right: 0.75rem;
+        }
+
+        .nav-btn>img {
+            height: 2rem;
+            margin-left: 0.5rem;
+        }
+
+        .banner-image {
+            margin-bottom: 2rem;
+            padding: 1.25rem;
+            padding-top: 1.5rem;
+        }
+
+        .banner-tag {
+            width: 6rem;
+            height: 2rem;
+            background-color: #ffd271;
+            border-radius: 1.5rem;
+            border-bottom-left-radius: 0px;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            color: #ff2b85;
+            font-weight: 500;
+            text-align: center;
+            line-height: 2rem;
+            margin-top: calc((100vw - 56px * 2) * -0.636 - 1rem) !important;
+        }
+
+        .banner-image span[id='banner'] {
+            display: block;
+            background-image: url(https://images.unsplash.com/photo-1640622308069-4352d9b4dcc8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80) !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+            background-size: cover;
+            width: 100% !important;
+            height: calc((100vw - 56px * 2) * 0.636) !important;
+            max-height: 374px;
+            border-radius: 1.5rem;
+        }
+
+        .banner-image img[id='banner'] {
+            display: none !important;
+        }
+
+        .banner-text {
+            padding-bottom: 2rem;
+        }
+
+        .banner-text>p {
+            text-align: center;
+            color: #ff2b85;
+            font-weight: 400;
+        }
+
+        .column-content-mobile td {
+            width: 100%;
+            padding: 0 1.25rem 1.25rem;
+        }
+
+        .column-content-mobile span[id='column'] {
+            display: block;
+            background-image: url(https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1271&q=80) !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+            background-size: cover;
+            width: 100% !important;
+            height: calc((100vw - 4rem)) !important;
+            max-height: 588px;
+            border-radius: 0.75rem;
+        }
+
+        .column-content-mobile img[id='column'] {
+            display: none !important;
+        }
+
+        .column-content-mobile p {
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            font-weight: 400;
+        }
+
+        .column-content-mobile h3 {
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+            font-weight: 600;
+            color: #ff2b85;
+        }
+
+        .column-content-mobile h4 {
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            font-weight: 400;
+            color: #ff2b85;
+            margin-bottom: 0.75rem;
+        }
+
+        .column-content-mobile p>a {
+            color: #1367e2;
+            text-decoration-line: underline;
+        }
+
+        .column-content-desktop {
+            display: none;
+        }
+
+        .column-more td {
+            padding-top: 3rem;
+            padding-bottom: 2.5rem;
+        }
+
+        .section-wrapper-2 {
+            max-width: 644px;
+            margin: auto;
+            background-color: #ff2b85;
+            padding: 1.75rem;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 1.75rem;
+            white-space: nowrap;
+        }
+
+        .sub-title {
+            margin-bottom: 1.25rem;
+        }
+
+        .sub-title>p {
+            text-align: center;
+            color: #ffffff;
+            font-weight: 400;
+        }
+
+        .main-btn img {
+            max-height: 2.5rem;
+        }
+
+        .watch-now td {
+            padding-top: 3rem;
+            padding-bottom: 1.75rem;
+        }
+
+        .event-template-1-mobile {
+            background-color: #ffffff;
+            border-radius: 1.5rem;
+            margin-bottom: 2rem !important;
+        }
+
+        .event-template-1-mobile .event-template-1-image>td {
+            width: 100%;
+            padding: 1.25rem;
+            background-color: #f9d0d4;
+            border-top-left-radius: 1.5rem;
+            border-top-right-radius: 1.5rem;
+        }
+
+        .event-template-1-mobile span[id='event'] {
+            display: block;
+            background-image: url(https://whatsticker.online/stickers_asset/ws-pack-5325474inxKWP/c1f952ec53e43.webp) !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+            background-size: contain;
+            width: 100% !important;
+            height: calc((100vw - 0.5rem)) !important;
+            max-height: 10rem;
+        }
+
+        .event-template-1-mobile img[id='event'] {
+            display: none !important;
+        }
+
+        .event-template-1-text table {
+            width: 100%;
+            padding: 1.25rem;
+        }
+
+        .event-template-1-text table:first-child {
+            padding-bottom: 0;
+        }
+
+        .event-template-1-text table:last-child {
+            padding-top: 0;
+        }
+
+        .event-template-1-mobile p {
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            font-weight: 400;
+        }
+
+        .event-template-1-mobile h3 {
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+            font-weight: 700;
+            color: #ff2b85;
+        }
+
+        .event-template-1-mobile h4 {
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            font-weight: 400;
+            color: #ff2b85;
+            margin-bottom: 0.75rem;
+        }
+
+        .event-template-1-mobile p>span {
+            color: #1367e2;
+            text-decoration-line: underline;
+        }
+
+        .event-template-1-desktop {
+            display: none;
+        }
+
+        .event-more td {
+            padding-top: 0.75rem;
+        }
+
+        .event-template-2 {
+            background-color: #ffffff;
+            border-radius: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .event-template-2-title {
+            background-color: #f9d0d4;
+        }
+
+        .event-template-2-title td:first-child {
+            border-top-left-radius: 1.5rem;
+            padding: 1.25rem;
+        }
+
+        .event-template-2-title td:last-child {
+            border-top-right-radius: 1.5rem;
+            padding: 1.25rem;
+        }
+
+        .event-template-2-title h2 {
+            font-size: 1.5rem;
+            line-height: 2rem;
+            font-weight: 700;
+            color: #ff2b85;
+            white-space: nowrap;
+        }
+
+        .event-template-2-title img {
+            max-height: 10rem;
+        }
+
+        .event-template-2-text>td {
+            padding: 1.25rem;
+        }
+
+        .event-template-2-text h3 {
+            font-size: 1.5rem;
+            line-height: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .event-template-2-text h3>span {
+            color: #ff2b85;
+        }
+
+        .event-template-2-text p>span {
+            color: #ff2b85;
+        }
+
+        .disclaimer {
+            margin-bottom: 2rem;
+        }
+
+        .disclaimer p {
+            text-align: center;
+            font-size: 0.75rem;
+            line-height: 1rem;
+            color: #ffffff;
+            font-weight: 300;
+        }
+
+        .event-template-3-mobile {
+            background-color: #ffffff;
+            border-radius: 1.5rem;
+            margin-bottom: 2rem !important;
+        }
+
+        .event-template-3-mobile .event-template-3-image>td {
+            width: 100%;
+            padding: 1.25rem;
+            padding-bottom: 0;
+            border-top-left-radius: 1.5rem;
+            border-top-right-radius: 1.5rem;
+        }
+
+        .event-template-3-mobile span[id='event'] {
+            display: block;
+            background-image: url(https://whatsticker.online/stickers_asset/ws-pack-5325474inxKWP/c40e25397a2f2.webp) !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+            background-size: contain;
+            width: 100% !important;
+            height: calc((100vw - 6rem)) !important;
+            max-height: 504px;
+            border-radius: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .event-template-3-mobile img[id='event'] {
+            display: none !important;
+        }
+
+        .event-template-3-text table {
+            width: 100%;
+            padding: 1.25rem;
+        }
+
+        .event-template-3-text table:first-child {
+            padding-bottom: 0;
+        }
+
+        .event-template-3-text table:last-child {
+            padding-top: 0;
+        }
+
+        .event-template-3-mobile p {
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            font-weight: 400;
+            margin-bottom: 0.75rem;
+        }
+
+        .event-template-3-mobile h2 {
+            margin-bottom: 0.75rem;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            font-weight: 700;
+            color: #ff2b85;
+        }
+
+        .event-template-3-mobile p>span {
+            color: #1367e2;
+            text-decoration-line: underline;
+        }
+
+        .event-template-3-mobile td>span {
+            font-size: 0.75rem;
+            line-height: 1rem;
+            color: #333333;
+        }
+
+        .event-template-3-desktop {
+            display: none;
+        }
+
+        .section-wrapper-3 {
+            padding: 1.75rem;
+        }
+
+        .primary-title {
+            color: #ff2b85;
+        }
+
+        .section-wrapper-4 {
+            padding: 1.75rem;
+            border-top-left-radius: 1.5rem;
+            border-top-right-radius: 1.5rem;
+            background-color: #ff2b85;
+        }
+
+        .link-wrapper td img {
+            width: 100%;
+            padding: 0 0.25rem;
+            max-width: 150px;
+        }
+
+        @media (min-width: 600px) {
+            .container {
+                max-width: 700px;
+            }
+
+            .section-wrapper-1 {
+                padding: 1rem;
+            }
+
+            .nav {
+                height: 5rem;
+            }
+
+            .nav-logo {
+                padding-left: 2.5rem;
+            }
+
+            .nav-logo>img {
+                width: 177px;
+            }
+
+            .nav-action {
+                padding-right: 2.5rem;
+            }
+
+            .nav-btn>img {
+                height: 2.5rem;
+                margin-left: 1rem;
+            }
+
+            .banner-image {
+                padding: 2.5rem;
+                padding-top: 3rem;
+                margin-bottom: 3rem;
+            }
+
+            .banner-tag {
+                width: 8rem;
+                height: 3rem;
+                font-size: 1.125rem;
+                line-height: 3rem;
+                margin-top: calc(-374px - 1.5rem) !important;
+            }
+
+            .banner-text {
+                margin-bottom: 3rem;
+            }
+
+            .banner-text>p {
+                font-size: 1.5rem;
+                line-height: 2rem;
+            }
+
+            .column-content-mobile {
+                display: none;
+            }
+
+            .column-content-desktop {
+                display: table !important;
+            }
+
+            .column-content-desktop p {
+                font-size: 0.875rem;
+                line-height: 1.25rem;
+                font-weight: 300;
+            }
+
+            .column-content-desktop h3 {
+                font-size: 1.875rem;
+                line-height: 2.25rem !important;
+                font-weight: 600;
+                color: #ff2b85;
+            }
+
+            .column-content-desktop h4 {
+                font-weight: 400;
+                color: #ff2b85;
+                font-size: 1.25rem;
+                line-height: 1.75rem;
+                margin-bottom: 1rem !important;
+            }
+
+            .column-content-desktop p>a {
+                color: #1367e2;
+                text-decoration-line: underline;
+            }
+
+            .section-wrapper-2 {
+                max-width: 668px;
+                padding: 2.5rem;
+            }
+
+            .title {
+                font-size: 2.25rem;
+                line-height: 2.5rem;
+                margin-bottom: 3.5rem;
+            }
+
+            .sub-title {
+                margin-bottom: 3rem;
+            }
+
+            .sub-title>p {
+                font-size: 1.5rem;
+                line-height: 2rem;
+            }
+
+            .main-btn img {
+                max-height: 3rem;
+            }
+
+            .watch-now td {
+                padding-top: 1.25rem;
+                padding-bottom: 3.5rem;
+            }
+
+            .event-template-1-mobile {
+                display: none;
+            }
+
+            .event-template-1-desktop {
+                display: table !important;
+                background-color: #ffffff;
+                border-radius: 1.5rem;
+                margin-bottom: 3rem !important;
+            }
+
+            .event-template-1-desktop p {
+                font-size: 0.875rem;
+                line-height: 1.25rem;
+                font-weight: 300;
+            }
+
+            .event-template-1-desktop h3 {
+                font-size: 1.5rem;
+                line-height: 2.25rem !important;
+                font-weight: 700;
+                color: #ff2b85;
+                margin-bottom: 1.25rem;
+            }
+
+            .event-template-1-desktop h4 {
+                font-weight: 400;
+                color: #ff2b85;
+                font-size: 1.25rem;
+                line-height: 1.75rem;
+                margin-bottom: 1rem !important;
+            }
+
+            .event-template-1-desktop p>span {
+                color: #1367e2;
+                text-decoration-line: underline;
+            }
+
+            .event-more td {
+                padding-top: 1.25rem;
+            }
+
+            .event-template-2 {
+                margin-bottom: 3rem;
+            }
+
+            .disclaimer {
+                margin-bottom: 3rem;
+            }
+
+            .event-template-3-mobile {
+                display: none;
+            }
+
+            .event-template-3-desktop {
+                display: table !important;
+                background-color: #ffffff;
+                border-radius: 1.5rem;
+                margin-bottom: 3rem !important;
+            }
+
+            .event-template-3-desktop p {
+                font-size: 0.875rem;
+                line-height: 1.25rem;
+                font-weight: 300;
+            }
+
+            .event-template-3-desktop h2 {
+                font-size: 1.5rem;
+                line-height: 2.25rem !important;
+                font-weight: 700;
+                color: #ff2b85;
+                margin-bottom: 1.25rem;
+            }
+
+            .event-template-3-desktop p>span {
+                color: #1367e2;
+                text-decoration-line: underline;
+            }
+
+            .event-template-3-desktop td>span {
+                font-size: 0.75rem;
+                line-height: 1rem;
+                color: #333333;
+            }
+
+            .section-wrapper-3 {
+                padding: 2.5rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -207,10 +900,10 @@
                                             </td>
                                         </tr>
                                     </table>
-                                    <table class="event-content-mobile" align="center" border="0" cellpadding="0"
+                                    <!-- 公告1 Mobile -->
+                                    <table class="event-template-1-mobile" align="center" border="0" cellpadding="0"
                                         cellspacing="0" role="presentation" width="100%" style="max-width:644px;">
-                                        <!-- 公告1 Mobile -->
-                                        <tr class="event-content-image">
+                                        <tr class="event-template-1-image">
                                             <td colspan="2" width="100%">
                                                 <span id="event">
                                                     <img id="event"
@@ -219,7 +912,7 @@
                                                 </span>
                                             </td>
                                         </tr>
-                                        <tr class="event-content-text">
+                                        <tr class="event-template-1-text">
                                             <td colspan="2" width="100%">
                                                 <table>
                                                     <tr>
@@ -252,20 +945,20 @@
                                                 </table>
                                             </td>
                                         </tr>
-                                        <tr class="event-content-text">
+                                        <tr class="event-template-1-text">
                                             <td colspan="2" width="100%" style="border-top: 1px solid #cccccc">
                                                 <table>
                                                     <tr>
                                                         <td>
-                                                            <h3>foodpanda 帳務異動提醒</h3>
+                                                            <h3>pandago 服務價目更新✨</h3>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>
                                                             <p>
-                                                                因適逢例假日，當月之對帳單資訊更新日期將調整為
-                                                                <span>2022/03/07 (一)、2022/03/21 (一)</span>
-                                                                ，詳情請見【帳務時程】公告。
+                                                                特別提醒您自 2022/3/7( 一) 起，pandago
+                                                                服務價目將有部分更新，詳情請見
+                                                                <span>【pandago 服務價目與規範】</span>
                                                             </p>
                                                         </td>
                                                     </tr>
@@ -286,10 +979,10 @@
                                             </td>
                                         </tr>
                                     </table>
-                                    <table class="event-content-desktop" border="0" cellpadding="0" cellspacing="0"
+                                    <!-- 公告1 Desktop -->
+                                    <table class="event-template-1-desktop" border="0" cellpadding="0" cellspacing="0"
                                         role="presentation" width="100%" style="max-width:644px; margin: auto;">
-                                        <!-- 公告1 Desktop -->
-                                        <tr class="event-content-image">
+                                        <tr class="event-template-1-image">
                                             <td align="right" width="248"
                                                 style="background-color: #f9d0d4; border-top-left-radius: 1.5rem; border-bottom-left-radius: 1.5rem;">
                                                 <table border="0" cellpadding="0" cellspacing="0" role="presentation"
@@ -299,8 +992,7 @@
                                                             <td align="center">
                                                                 <img alt="" border="0"
                                                                     src="https://whatsticker.online/stickers_asset/ws-pack-5325474inxKWP/c1f952ec53e43.webp"
-                                                                    style="display:block;border-radius:0.75rem;"
-                                                                    width="204">
+                                                                    style="display:block;" width="204">
                                                             </td>
                                                         </tr>
                                                     </tbody>
@@ -310,7 +1002,7 @@
                                                 <table border="0" cellpadding="0" cellspacing="0" role="presentation"
                                                     width="100%">
                                                     <tbody>
-                                                        <tr class="event-content-text">
+                                                        <tr class="event-template-1-text">
                                                             <td colspan="2" width="100%">
                                                                 <table>
                                                                     <tr>
@@ -344,7 +1036,7 @@
                                                                 </table>
                                                             </td>
                                                         </tr>
-                                                        <tr class="event-content-text">
+                                                        <tr class="event-template-1-text">
                                                             <td colspan="2" width="100%"
                                                                 style="border-top: 1px solid #cccccc">
                                                                 <table>
@@ -383,10 +1075,437 @@
                                             </td>
                                         </tr>
                                     </table>
+                                    <!-- 公告2 -->
+                                    <table class="event-template-2" align="center" border="0" cellpadding="0"
+                                        cellspacing="0" role="presentation" width="100%" style="max-width:644px;">
+                                        <tr class="event-template-2-title">
+                                            <td colspan="1" width="100%">
+                                                <h2>好評不斷！</h2>
+                                                <h2>第三波《環境友善店家》</h2>
+                                                <h2>來囉～</h2>
+                                            </td>
+                                            <td colspan="1" width="100%">
+                                                <img src="https://whatsticker.online/stickers_asset/ws-pack-5325474inxKWP/c4a3c1a7b4193.webp"
+                                                    alt="">
+                                            </td>
+                                        </tr>
+                                        <tr class="event-template-2-text">
+                                            <td colspan="2" width="100%">
+                                                <table>
+                                                    <tr>
+                                                        <td>
+                                                            <h3>第三波《foodpanda 環境友善店家》活動開跑囉！</h3>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <p>即日起，只要為 foodpanda 合作商家即可報名參加！</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <p>
+                                                                成功入選之商家，就能獲得：
+                                                                <span>foodpanda 平台廣告曝光+主題版位+置頂主題專區+專屬門貼!!</span>
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table class="event-more" align="center" border="0" cellpadding="0"
+                                                    cellspacing="0" role="presentation" width="100%"
+                                                    style="max-width:644px;">
+                                                    <tr>
+                                                        <td align="right">
+                                                            <a href="https://www.google.com" target="_blank"
+                                                                class="main-btn">
+                                                                <img src="https://lh3.googleusercontent.com/tT_QUSpjrSObfx_HUzSrxidMFEe7E237mt_eIHcM0GGeXMBor_FA4ibfp31rGYiV204mVHjD0ndJ73hOT7G9Zeh9DS9PcO68xK5Ehy1OiU1BSvaY-Yxcv9HRYzSUWT_ZMk42ajiReQ=w400"
+                                                                    alt="">
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- 免責聲明 -->
+                                    <table class="disclaimer" align="center" border="0" cellpadding="0" cellspacing="0"
+                                        role="presentation" width="100%" style="max-width:644px;">
+                                        <tr>
+                                            <td>
+                                                <p>實際活動詳情及辦法以App及活動頁面顯示為主，</p>
+                                                <p>foodpanda 保留隨時單方修改權利。</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- 公告3 Mobile -->
+                                    <table class="event-template-3-mobile" align="center" border="0" cellpadding="0"
+                                        cellspacing="0" role="presentation" width="100%" style="max-width:644px;">
+                                        <tr class="event-template-3-image">
+                                            <td colspan="2" width="100%">
+                                                <span id="event">
+                                                    <img id="event"
+                                                        src="https://whatsticker.online/stickers_asset/ws-pack-5325474inxKWP/c40e25397a2f2.webp"
+                                                        style="border-radius: 1.5rem;" alt="">
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr class="event-template-3-text">
+                                            <td colspan="2" width="100%">
+                                                <table style="padding-top: 0">
+                                                    <tr>
+                                                        <td>
+                                                            <h2>▶ 商家營業提醒</h2>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <p>
+                                                                自 2022/02/21(一) 起，如商家有多筆延遲出餐之情況，接單系統
+                                                                <span>將自動暫停訂單 15 分鐘</span>
+                                                                ，於 15分鐘後系統將正常開啟接單；如商家欲提前開啟系統，可隨時自行恢復正常營業狀態。
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span>※ 提醒您 ※</span>
+                                                            <span>若商家夥伴於用餐顛峰時段，有暫停接單之需求，煩請透過接單設備調整【營業狀態】。</span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table class="event-more" align="center" border="0" cellpadding="0"
+                                                    cellspacing="0" role="presentation" width="100%"
+                                                    style="max-width:644px;">
+                                                    <tr>
+                                                        <td align="right">
+                                                            <a href="https://www.google.com" target="_blank"
+                                                                class="main-btn">
+                                                                <img src="https://lh3.googleusercontent.com/y3wmnuPenv3u6rkyjSVgnJZfcK9dGNe7thcEyhcwUjKQyUpNM8dBr3lSBVq42nEhoMir9-Lu2LIprQ4bwGMTkdCsDjQ63ehfWlLhE29bKRHSe08rTzELvNhWv9ANn1XtR7pWmMv-tw=w400"
+                                                                    alt="">
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- 公告3 Desktop -->
+                                    <table class="event-template-3-desktop" border="0" cellpadding="0" cellspacing="0"
+                                        role="presentation" width="100%" style="max-width:644px; margin: auto;">
+                                        <tr class="event-template-3-image">
+                                            <td align="right" width="248">
+                                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                                    width="248" height="248">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td align="center">
+                                                                <img alt="" border="0"
+                                                                    src="https://whatsticker.online/stickers_asset/ws-pack-5325474inxKWP/c40e25397a2f2.webp"
+                                                                    style="display:block;border-radius:1.5rem;"
+                                                                    width="204" height="204">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                            <td width="100%">
+                                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                                    width="100%">
+                                                    <tbody>
+                                                        <tr class="event-template-3-text">
+                                                            <td colspan="2" width="100%">
+                                                                <table>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <h2>▶ 商家營業提醒</h2>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <p>
+                                                                                自 2022/02/21(一) 起，如商家有多筆延遲出餐之情況，接單系統
+                                                                                <span>將自動暫停訂單 15 分鐘</span>
+                                                                                ，於
+                                                                                15分鐘後系統將正常開啟接單；如商家欲提前開啟系統，可隨時自行恢復正常營業狀態。
+                                                                            </p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <span>※ 提醒您 ※</span>
+                                                                            <span>若商家夥伴於用餐顛峰時段，有暫停接單之需求，煩請透過接單設備調整【營業狀態】。</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                                <table class="event-more" align="center" border="0"
+                                                                    cellpadding="0" cellspacing="0" role="presentation"
+                                                                    width="100%" style="max-width:644px;">
+                                                                    <tr>
+                                                                        <td align="right">
+                                                                            <a href="https://www.google.com"
+                                                                                target="_blank" class="main-btn">
+                                                                                <img src="https://lh3.googleusercontent.com/y3wmnuPenv3u6rkyjSVgnJZfcK9dGNe7thcEyhcwUjKQyUpNM8dBr3lSBVq42nEhoMir9-Lu2LIprQ4bwGMTkdCsDjQ63ehfWlLhE29bKRHSe08rTzELvNhWv9ANn1XtR7pWmMv-tw=w400"
+                                                                                    alt="">
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
                                 </div>
                             </td>
                         </tr>
                     </table>
+                </div>
+            </td>
+        </tr>
+
+        <!-- Third Section -->
+        <tr>
+            <td>
+                <div class="container">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                        <tr>
+                            <td>
+                                <div class="section-wrapper-3">
+                                    <!-- 本月活動 -->
+                                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                        width="100%" style="max-width:644px;">
+                                        <tr>
+                                            <td>
+                                                <h1 class="title primary-title">本月活動</h1>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- 活動1 -->
+                                    <table class="event-template-2" align="center" border="0" cellpadding="0"
+                                        cellspacing="0" role="presentation" width="100%" style="max-width:644px;">
+                                        <tr class="event-template-2-title">
+                                            <td colspan="1" width="100%">
+                                                <h2>商家門貼</h2>
+                                                <h2>除舊布新計畫</h2>
+                                            </td>
+                                            <td colspan="1" width="100%">
+                                                <img src="https://whatsticker.online/stickers_asset/ws-pack-5325474inxKWP/c4a3c1a7b4193.webp"
+                                                    alt="">
+                                            </td>
+                                        </tr>
+                                        <tr class="event-template-2-text">
+                                            <td colspan="2" width="100%"
+                                                style="border: 1px solid #cccccc; border-top: none; border-bottom-left-radius: 1.5rem; border-bottom-right-radius: 1.5rem;">
+                                                <table>
+                                                    <tr>
+                                                        <td>
+                                                            <h3>
+                                                                秀出新版商家門貼✨就有機會獲得
+                                                                <span>商家限定好禮</span>
+                                                                !
+                                                            </h3>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <p>跟著胖胖達一起除舊布新，迎接新年好運🎉</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <p>讓更多人發現您的 foodpanda 商家🤩</p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table class="event-more" align="center" border="0" cellpadding="0"
+                                                    cellspacing="0" role="presentation" width="100%"
+                                                    style="max-width:644px;">
+                                                    <tr>
+                                                        <td align="right">
+                                                            <a href="https://www.google.com" target="_blank"
+                                                                class="main-btn">
+                                                                <img src="https://lh3.googleusercontent.com/rnQVsQyRnLa00fC3F9Rj1odBbskGPuM6S5raPYpjKvo-O79afoTtNFt-egbsnPy6mBia1MTZQCODn7pswFeNjZ0plNQiTKv_JJ3WbSojqrvA9Ev9F4FipqRdYsJHP_ThPC1Etb-VYg=w400"
+                                                                    alt="">
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- 活動2 Mobile -->
+                                    <table class="event-template-3-mobile" align="center" border="0" cellpadding="0"
+                                        cellspacing="0" role="presentation" width="100%"
+                                        style="max-width:644px; border: 1px solid #cccccc;">
+                                        <tr class="event-template-3-image">
+                                            <td colspan="2" width="100%">
+                                                <span id="event">
+                                                    <img id="event"
+                                                        src="https://whatsticker.online/stickers_asset/ws-pack-5325474inxKWP/c40e25397a2f2.webp"
+                                                        style="border-radius: 1.5rem;" alt="">
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr class="event-template-3-text">
+                                            <td colspan="2" width="100%">
+                                                <table style="padding-top: 0">
+                                                    <tr>
+                                                        <td>
+                                                            <h2>照過來📷上傳餐點照拿好禮</h2>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <p>現在透過 foodpanda 商家平台，上傳餐點照片✨就有機會獲得限量好禮🎁</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <p>快到您的信箱尋找參賽憑證：【foodpanda】「照」過來！上傳餐點照，領取專屬好禮</p>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <table class="event-more" align="center" border="0" cellpadding="0"
+                                                    cellspacing="0" role="presentation" width="100%"
+                                                    style="max-width:644px;">
+                                                    <tr>
+                                                        <td align="right">
+                                                            <a href="https://www.google.com" target="_blank"
+                                                                class="main-btn">
+                                                                <img src="https://lh3.googleusercontent.com/CuP4khJqXX_KHLMZaSXhhUddPfFTXO1r89ULybvrxaj6a0pKdFgoViJnmNeBHs7y-NqABgcRATST4x_BKyVzWEAeFNoZ1e2WSujq5Th4nKaJqNlEmvRnj-_Uzpm20-H8xvmAeHturw=w400"
+                                                                    alt="">
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- 活動2 Desktop -->
+                                    <table class="event-template-3-desktop" border="0" cellpadding="0" cellspacing="0"
+                                        role="presentation" width="100%"
+                                        style="max-width:644px; margin: auto; border: 1px solid #cccccc;">
+                                        <tr class="event-template-3-image">
+                                            <td align="right" width="248">
+                                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                                    width="248" height="248">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td align="center">
+                                                                <img alt="" border="0"
+                                                                    src="https://whatsticker.online/stickers_asset/ws-pack-5325474inxKWP/c40e25397a2f2.webp"
+                                                                    style="display:block;border-radius:1.5rem;"
+                                                                    width="204" height="204">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                            <td width="100%">
+                                                <table border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                                    width="100%">
+                                                    <tbody>
+                                                        <tr class="event-template-3-text">
+                                                            <td colspan="2" width="100%">
+                                                                <table>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <h2>照過來📷上傳餐點照拿好禮</h2>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <p>現在透過 foodpanda 商家平台，上傳餐點照片✨就有機會獲得限量好禮🎁
+                                                                            </p>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <p>快到您的信箱尋找參賽憑證：【foodpanda】「照」過來！上傳餐點照，領取專屬好禮
+                                                                            </p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                                <table class="event-more" align="center" border="0"
+                                                                    cellpadding="0" cellspacing="0" role="presentation"
+                                                                    width="100%" style="max-width:644px;">
+                                                                    <tr>
+                                                                        <td align="right">
+                                                                            <a href="https://www.google.com"
+                                                                                target="_blank" class="main-btn">
+                                                                                <img src="https://lh3.googleusercontent.com/CuP4khJqXX_KHLMZaSXhhUddPfFTXO1r89ULybvrxaj6a0pKdFgoViJnmNeBHs7y-NqABgcRATST4x_BKyVzWEAeFNoZ1e2WSujq5Th4nKaJqNlEmvRnj-_Uzpm20-H8xvmAeHturw=w400"
+                                                                                    alt="">
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+
+        <!-- Fourth Section -->
+        <tr>
+            <td>
+                <div class="container">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                        <tr>
+                            <td>
+                                <div class="section-wrapper-4">
+                                    <!-- 聯絡我們 -->
+                                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                        width="100%" style="max-width:644px;">
+                                        <tr>
+                                            <td>
+                                                <h1 class="title">聯絡我們</h1>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- 連結 -->
+                                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                        width="100%" style="max-width:644px;">
+                                        <tr class="link-wrapper">
+                                            <td align="center">
+                                                <img src="https://lh3.googleusercontent.com/Q5CifQ53PeOyVlNT93ylzpbmTTUdIHSnzLToZ_6N_6tRXtOGiZj5B5FkDfDqTSpYKubNCSNXjJgEf57mA1rALNh9xO32S61wO6khKbWoDQQAUoGZJ3vHCJyP8C44g4vlIqcxPl491g=w400"
+                                                    alt="">
+                                            </td>
+                                            <td align="center">
+                                                <img src="https://lh3.googleusercontent.com/ulyMV9daB-x74tjlxT1437konG6lyOKlSOM_8XUJFIPRnzhR9l9zRV6VrFcFtiauy4_dLVLfm0Ka1eseAUSbhr-tHxcsLhvoYsqDCVyg1e9Z2TRLprjq7AEIDtarUcIRo8tFdyiTAA=w400"
+                                                    alt="">
+                                            </td>
+                                            <td align="center">
+                                                <img src="https://lh3.googleusercontent.com/GPGjoLwB8OukiWU7S2TJRVdnLrAwRaMtcNybTuAEArsqdyY7uzb-FY7M_Pj_9mFVGujlG_91LN7pEXrFxl7V7OHKhC9P4vcGXJTGPejzUtGIEsSQOu1gZkcbrwtEbEs1E6tki-jqlQ=w400"
+                                                    alt="">
+                                            </td>
+                                            <td align="center">
+                                                <img src="https://lh3.googleusercontent.com/7_xb3SJfz-O6Tv0esd0k7sEdIQe8HVGZAVw_enDLlmar0jnza3fQ8TgimWQEorBz3Pf3OyvSNUSclc0C2fKOr_scXLk3lfgEnPRMXaYOlP8eg_5JyMagOy5lbLXsdkTB14SVcIBqlA=w400"
+                                                    alt="">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+        <!-- Fourth Section -->
+        <tr>
+            <td>
+                <div class="container">
                 </div>
             </td>
         </tr>
