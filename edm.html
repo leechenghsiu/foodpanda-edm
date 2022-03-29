@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Foodpanda eDM Mar.</title>
-    <!-- <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="media.css"> -->
     <style>
         /* Normalized CSS */
         *,
@@ -61,9 +59,39 @@
         }
 
         .container {
-            max-width: 600px;
             width: 100%;
             margin: auto;
+        }
+
+        .main-btn {
+            display: inline-block;
+            border-radius: 1.5rem;
+            height: 2.5rem;
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
+        }
+
+        .main-btn>p {
+            color: #ffffff;
+            font-size: 1rem;
+            line-height: 2.5rem;
+            font-weight: 500;
+        }
+
+        .secondary-btn {
+            background-color: #e673a3;
+        }
+
+        .primary-btn {
+            background-color: #ff2b85;
+        }
+
+        .white-btn {
+            background-color: #ffffff;
+        }
+
+        .watch-btn>p {
+            color: #ff2b85;
         }
 
         .section-wrapper-1 {
@@ -124,7 +152,6 @@
         .banner-image {
             margin-bottom: 2rem;
             padding: 1.25rem;
-            padding-top: 1.5rem;
         }
 
         .banner-tag {
@@ -251,17 +278,33 @@
             font-weight: 400;
         }
 
-        .main-btn img {
-            max-height: 2.5rem;
+        .watch-now td {
+            padding-top: 1.75rem;
+            padding-bottom: 2rem;
         }
 
-        .watch-now td {
-            padding-top: 3rem;
+        .video {
             padding-bottom: 1.75rem;
         }
 
+        .video span[id='video'] {
+            display: block;
+            background-image: url(https://images.unsplash.com/photo-1640622308069-4352d9b4dcc8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80) !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+            background-size: cover;
+            width: 100% !important;
+            height: calc((100vw - 56px * 2) * 0.636) !important;
+            max-height: 374px;
+            border-radius: 1.5rem;
+        }
+
+        .video img[id='video'] {
+            display: none !important;
+        }
+
         .event-template-1-mobile {
-            background-color: #ffffff;
+            background-color: #e673a3;
             border-radius: 1.5rem;
             margin-bottom: 2rem !important;
         }
@@ -290,19 +333,12 @@
         }
 
         .event-template-1-text table {
+            background-color: #ffffff;
             width: 100%;
             padding: 1.25rem;
         }
 
-        .event-template-1-text table:first-child {
-            padding-bottom: 0;
-        }
-
-        .event-template-1-text table:last-child {
-            padding-top: 0;
-        }
-
-        .event-template-1-mobile p {
+        .event-template-1-mobile td>p {
             font-size: 0.875rem;
             line-height: 1.25rem;
             font-weight: 400;
@@ -332,18 +368,10 @@
             display: none;
         }
 
-        .event-more td {
-            padding-top: 0.75rem;
-        }
-
         .event-template-2 {
-            background-color: #ffffff;
+            background-color: #f9d0d4;
             border-radius: 1.5rem;
             margin-bottom: 2rem;
-        }
-
-        .event-template-2-title {
-            background-color: #f9d0d4;
         }
 
         .event-template-2-title td:first-child {
@@ -369,7 +397,10 @@
         }
 
         .event-template-2-text>td {
+            background-color: #ffffff;
             padding: 1.25rem;
+            border-bottom-left-radius: 1.5rem;
+            border-bottom-right-radius: 1.5rem;
         }
 
         .event-template-2-text h3 {
@@ -442,11 +473,10 @@
             padding-top: 0;
         }
 
-        .event-template-3-mobile p {
+        .event-template-3-mobile td>p {
             font-size: 0.875rem;
             line-height: 1.25rem;
             font-weight: 400;
-            margin-bottom: 0.75rem;
         }
 
         .event-template-3-mobile h2 {
@@ -525,7 +555,6 @@
 
             .banner-image {
                 padding: 2.5rem;
-                padding-top: 3rem;
                 margin-bottom: 3rem;
             }
 
@@ -581,14 +610,14 @@
             }
 
             .section-wrapper-2 {
-                max-width: 668px;
+                max-width: 700px;
                 padding: 2.5rem;
             }
 
             .title {
                 font-size: 2.25rem;
                 line-height: 2.5rem;
-                margin-bottom: 3.5rem;
+                margin-bottom: 3rem;
             }
 
             .sub-title {
@@ -598,10 +627,6 @@
             .sub-title>p {
                 font-size: 1.5rem;
                 line-height: 2rem;
-            }
-
-            .main-btn img {
-                max-height: 3rem;
             }
 
             .watch-now td {
@@ -620,7 +645,7 @@
                 margin-bottom: 3rem !important;
             }
 
-            .event-template-1-desktop p {
+            .event-template-1-desktop td>p {
                 font-size: 0.875rem;
                 line-height: 1.25rem;
                 font-weight: 300;
@@ -647,10 +672,6 @@
                 text-decoration-line: underline;
             }
 
-            .event-more td {
-                padding-top: 1.25rem;
-            }
-
             .event-template-2 {
                 margin-bottom: 3rem;
             }
@@ -667,10 +688,9 @@
                 display: table !important;
                 background-color: #ffffff;
                 border-radius: 1.5rem;
-                margin-bottom: 3rem !important;
             }
 
-            .event-template-3-desktop p {
+            .event-template-3-desktop td>p {
                 font-size: 0.875rem;
                 line-height: 1.25rem;
                 font-weight: 300;
@@ -729,7 +749,7 @@
                                                                 <!-- 揪團加入按鈕 -->
                                                                 <a href="https://www.google.com" target="_blank"
                                                                     class="nav-btn">
-                                                                    <img src="https://lh3.googleusercontent.com/KMajhnGdLhw-1tyxibaJ7x_2sT7xoAY3gGE0Jh5LhUKjv2c74E-aAiA9wKUWHGXMH6y5HHuqdKljk60J-FBNg8X-q51tO0ebOzo1UNctoCKsmus4Jfh25lZZ6Jtl5EbHuMoBP6wZnA=w100"
+                                                                    <img src="https://lh3.googleusercontent.com/BdSvch7uJYcOvistSXAEeJBOhjPdRP_L4SrkNoYk--m5knWiggfGd6facVbDprp0Ww8MIdaU-uJPJsDqPHZLiQml8yY9Ej4YhGHwmjHfvJzWEdYpc8IT69pgqMMK1jz0PtV2ZGqLTA=w400"
                                                                         alt="">
                                                                 </a>
                                                             </td>
@@ -737,7 +757,7 @@
                                                                 <!-- 加入好友按鈕 -->
                                                                 <a href="https://www.google.com" target="_blank"
                                                                     class="nav-btn">
-                                                                    <img src="https://lh3.googleusercontent.com/LVqBMOdRbI3jMY2mfOp7HLm1EpEV2lQfVnDMkF9Djq5zdjYqavdlGX_1X4SOKWoVpieW3hIXFSbY2EXhhbFOkdotwoWmupSD-0PjQ76kIAbZrrqTejX5wX4fz44TR3OkMEEYZ3_HSw=w100"
+                                                                    <img src="https://lh3.googleusercontent.com/yFlVk60NJ8CZWziN64YlYGd9BkBIqyI-t6-4TFZRF2X75OmcLOjX6jDhruW5aALR6E0VM520gtjRJIexXfWyZNuB7gqWZTl_q-zwAVgKHgBTmuyj9D2fmKQugQzCFBHxTikgZWM6jA=w400"
                                                                         alt="">
                                                                 </a>
                                                             </td>
@@ -842,9 +862,9 @@
                                             cellspacing="0" role="presentation" width="100%" style="max-width:644px;">
                                             <tr>
                                                 <td align="center">
-                                                    <a href="https://www.google.com" target="_blank" class="main-btn">
-                                                        <img src="https://lh3.googleusercontent.com/H-AiDjQvtolOBJ549Qar9Vrzf3DNNcLCnC2fDdfc8FTnp2xNDUN8-IyuVsV9EvuqEzkRkEiyxzsjRSm4MljtSeiVQeI4tNAgKSl2Uu50P19P212jfNZPv9THuGxQ6EHPO27rhgb92Q=w400"
-                                                            alt="">
+                                                    <a href="https://www.google.com" target="_blank"
+                                                        class="main-btn secondary-btn more-btn">
+                                                        <p>更多您所不知道的商家暖心故事</p>
                                                     </a>
                                                 </td>
                                             </tr>
@@ -874,6 +894,15 @@
                                             </td>
                                         </tr>
                                         <tr>
+                                            <td class="video" colspan="2" width="100%">
+                                                <span id="video">
+                                                    <img id="video"
+                                                        src="https://images.unsplash.com/photo-1640622308069-4352d9b4dcc8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                                                        alt="">
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
                                             <td class="sub-title" colspan="2" width="100%">
                                                 <p>全新一集胖達快報，</p>
                                                 <p>一分鐘快速帶您掌握餐飲防疫三要點</p>
@@ -885,9 +914,9 @@
                                         role="presentation" width="100%" style="max-width:644px;">
                                         <tr>
                                             <td align="center">
-                                                <a href="https://www.google.com" target="_blank" class="main-btn">
-                                                    <img src="https://lh3.googleusercontent.com/vuFyh8OGdgc73i6DZUaVSJWgWmKFq76dXjOkGeuoeZ9FAaJL4DouygKIm5YFiVrLcoXqrPn27FzsA0OQOHOuGtdJ0ABpBB8eMlR72pWgCKbOzQ5D__XZ1Vw7aegSan6Vz_Wdn8DnQA=w400"
-                                                        alt="">
+                                                <a href="https://www.google.com" target="_blank"
+                                                    class="main-btn white-btn watch-btn">
+                                                    <p>立即觀看</p>
                                                 </a>
                                             </td>
                                         </tr>
@@ -914,7 +943,8 @@
                                         </tr>
                                         <tr class="event-template-1-text">
                                             <td colspan="2" width="100%">
-                                                <table>
+                                                <table align="center" border="0" cellpadding="0" cellspacing="0"
+                                                    role="presentation" width="100%" style="max-width:644px;">
                                                     <tr>
                                                         <td>
                                                             <h3>foodpanda 帳務異動提醒</h3>
@@ -929,16 +959,11 @@
                                                             </p>
                                                         </td>
                                                     </tr>
-                                                </table>
-                                                <table class="event-more" align="center" border="0" cellpadding="0"
-                                                    cellspacing="0" role="presentation" width="100%"
-                                                    style="max-width:644px;">
                                                     <tr>
-                                                        <td align="right">
+                                                        <td align="right" style="padding-top: 0.75rem;">
                                                             <a href="https://www.google.com" target="_blank"
-                                                                class="main-btn">
-                                                                <img src="https://lh3.googleusercontent.com/OOZMZHWHAjkYtes71cL8Fp3lXHRPLZ5fO1arwXmwkkU1zbliVHZQLZyT2VgOLt5zi3OOqcYv6KyWO8Eko-aSS7DBf3LgOnW9ysHMu5mWUXeavlxm9zlxSvnB6lUW88f8iBTuQWRGBQ=w400"
-                                                                    alt="">
+                                                                class="main-btn secondary-btn">
+                                                                <p>查看詳情</p>
                                                             </a>
                                                         </td>
                                                     </tr>
@@ -946,8 +971,10 @@
                                             </td>
                                         </tr>
                                         <tr class="event-template-1-text">
-                                            <td colspan="2" width="100%" style="border-top: 1px solid #cccccc">
-                                                <table>
+                                            <td colspan="2" width="100%" style="border-top: 1px solid #cccccc;">
+                                                <table align="center" border="0" cellpadding="0" cellspacing="0"
+                                                    role="presentation" width="100%"
+                                                    style="max-width:644px; border-bottom-left-radius: 1.5rem; border-bottom-right-radius: 1.5rem;">
                                                     <tr>
                                                         <td>
                                                             <h3>pandago 服務價目更新✨</h3>
@@ -962,16 +989,11 @@
                                                             </p>
                                                         </td>
                                                     </tr>
-                                                </table>
-                                                <table class="event-more" align="center" border="0" cellpadding="0"
-                                                    cellspacing="0" role="presentation" width="100%"
-                                                    style="max-width:644px;">
                                                     <tr>
-                                                        <td align="right">
+                                                        <td align="right" style="padding-top: 0.75rem;">
                                                             <a href="https://www.google.com" target="_blank"
-                                                                class="main-btn">
-                                                                <img src="https://lh3.googleusercontent.com/OOZMZHWHAjkYtes71cL8Fp3lXHRPLZ5fO1arwXmwkkU1zbliVHZQLZyT2VgOLt5zi3OOqcYv6KyWO8Eko-aSS7DBf3LgOnW9ysHMu5mWUXeavlxm9zlxSvnB6lUW88f8iBTuQWRGBQ=w400"
-                                                                    alt="">
+                                                                class="main-btn secondary-btn">
+                                                                <p>查看詳情</p>
                                                             </a>
                                                         </td>
                                                     </tr>
@@ -1004,7 +1026,9 @@
                                                     <tbody>
                                                         <tr class="event-template-1-text">
                                                             <td colspan="2" width="100%">
-                                                                <table>
+                                                                <table align="center" border="0" cellpadding="0"
+                                                                    cellspacing="0" role="presentation" width="100%"
+                                                                    style="max-width:644px; border-top-right-radius: 1.5rem;">
                                                                     <tr>
                                                                         <td>
                                                                             <h3>foodpanda 帳務異動提醒</h3>
@@ -1020,16 +1044,12 @@
                                                                             </p>
                                                                         </td>
                                                                     </tr>
-                                                                </table>
-                                                                <table class="event-more" align="center" border="0"
-                                                                    cellpadding="0" cellspacing="0" role="presentation"
-                                                                    width="100%" style="max-width:644px;">
                                                                     <tr>
-                                                                        <td align="right">
+                                                                        <td align="right" style="padding-top: 1.25rem;">
                                                                             <a href="https://www.google.com"
-                                                                                target="_blank" class="main-btn">
-                                                                                <img src="https://lh3.googleusercontent.com/OOZMZHWHAjkYtes71cL8Fp3lXHRPLZ5fO1arwXmwkkU1zbliVHZQLZyT2VgOLt5zi3OOqcYv6KyWO8Eko-aSS7DBf3LgOnW9ysHMu5mWUXeavlxm9zlxSvnB6lUW88f8iBTuQWRGBQ=w400"
-                                                                                    alt="">
+                                                                                target="_blank"
+                                                                                class="main-btn secondary-btn">
+                                                                                <p>查看詳情</p>
                                                                             </a>
                                                                         </td>
                                                                     </tr>
@@ -1039,7 +1059,9 @@
                                                         <tr class="event-template-1-text">
                                                             <td colspan="2" width="100%"
                                                                 style="border-top: 1px solid #cccccc">
-                                                                <table>
+                                                                <table align="center" border="0" cellpadding="0"
+                                                                    cellspacing="0" role="presentation" width="100%"
+                                                                    style="max-width:644px; border-bottom-right-radius: 1.5rem;">
                                                                     <tr>
                                                                         <td>
                                                                             <h3>pandago 服務價目更新✨</h3>
@@ -1054,16 +1076,12 @@
                                                                             </p>
                                                                         </td>
                                                                     </tr>
-                                                                </table>
-                                                                <table class="event-more" align="center" border="0"
-                                                                    cellpadding="0" cellspacing="0" role="presentation"
-                                                                    width="100%" style="max-width:644px;">
                                                                     <tr>
-                                                                        <td align="right">
+                                                                        <td align="right" style="padding-top: 1.25rem;">
                                                                             <a href="https://www.google.com"
-                                                                                target="_blank" class="main-btn">
-                                                                                <img src="https://lh3.googleusercontent.com/OOZMZHWHAjkYtes71cL8Fp3lXHRPLZ5fO1arwXmwkkU1zbliVHZQLZyT2VgOLt5zi3OOqcYv6KyWO8Eko-aSS7DBf3LgOnW9ysHMu5mWUXeavlxm9zlxSvnB6lUW88f8iBTuQWRGBQ=w400"
-                                                                                    alt="">
+                                                                                target="_blank"
+                                                                                class="main-btn secondary-btn">
+                                                                                <p>查看詳情</p>
                                                                             </a>
                                                                         </td>
                                                                     </tr>
@@ -1111,15 +1129,13 @@
                                                         </td>
                                                     </tr>
                                                 </table>
-                                                <table class="event-more" align="center" border="0" cellpadding="0"
-                                                    cellspacing="0" role="presentation" width="100%"
-                                                    style="max-width:644px;">
+                                                <table align="center" border="0" cellpadding="0" cellspacing="0"
+                                                    role="presentation" width="100%" style="max-width:644px;">
                                                     <tr>
-                                                        <td align="right">
+                                                        <td align="right" style="padding-top: 1.25rem;">
                                                             <a href="https://www.google.com" target="_blank"
-                                                                class="main-btn">
-                                                                <img src="https://lh3.googleusercontent.com/rCF6oHoaE5qNntJw9OiXiZjBAanCaVk_nAHxWKH2jeNXLP2Xz3kC1JLJ5ZqSQ-a50XWA0wxmgS-r8UUnsDDJWss_U4LSxgdU6yrtey5XQi69XHNdMN9w8qIxkpKOyusagj2gS9EmVw=w400"
-                                                                    alt="">
+                                                                class="main-btn secondary-btn">
+                                                                <p>立刻了解</p>
                                                             </a>
                                                         </td>
                                                     </tr>
@@ -1173,15 +1189,13 @@
                                                         </td>
                                                     </tr>
                                                 </table>
-                                                <table class="event-more" align="center" border="0" cellpadding="0"
-                                                    cellspacing="0" role="presentation" width="100%"
-                                                    style="max-width:644px;">
+                                                <table align="center" border="0" cellpadding="0" cellspacing="0"
+                                                    role="presentation" width="100%" style="max-width:644px;">
                                                     <tr>
-                                                        <td align="right">
+                                                        <td align="right" style="padding-top: 1.25rem;">
                                                             <a href="https://www.google.com" target="_blank"
-                                                                class="main-btn">
-                                                                <img src="https://lh3.googleusercontent.com/OOZMZHWHAjkYtes71cL8Fp3lXHRPLZ5fO1arwXmwkkU1zbliVHZQLZyT2VgOLt5zi3OOqcYv6KyWO8Eko-aSS7DBf3LgOnW9ysHMu5mWUXeavlxm9zlxSvnB6lUW88f8iBTuQWRGBQ=w400"
-                                                                    alt="">
+                                                                class="main-btn secondary-btn">
+                                                                <p>查看詳情</p>
                                                             </a>
                                                         </td>
                                                     </tr>
@@ -1237,15 +1251,15 @@
                                                                         </td>
                                                                     </tr>
                                                                 </table>
-                                                                <table class="event-more" align="center" border="0"
-                                                                    cellpadding="0" cellspacing="0" role="presentation"
-                                                                    width="100%" style="max-width:644px;">
+                                                                <table align="center" border="0" cellpadding="0"
+                                                                    cellspacing="0" role="presentation" width="100%"
+                                                                    style="max-width:644px;">
                                                                     <tr>
-                                                                        <td align="right">
+                                                                        <td align="right" style="padding-top: 1.25rem;">
                                                                             <a href="https://www.google.com"
-                                                                                target="_blank" class="main-btn">
-                                                                                <img src="https://lh3.googleusercontent.com/OOZMZHWHAjkYtes71cL8Fp3lXHRPLZ5fO1arwXmwkkU1zbliVHZQLZyT2VgOLt5zi3OOqcYv6KyWO8Eko-aSS7DBf3LgOnW9ysHMu5mWUXeavlxm9zlxSvnB6lUW88f8iBTuQWRGBQ=w400"
-                                                                                    alt="">
+                                                                                target="_blank"
+                                                                                class="main-btn secondary-btn">
+                                                                                <p>查看詳情</p>
                                                                             </a>
                                                                         </td>
                                                                     </tr>
@@ -1298,7 +1312,8 @@
                                         <tr class="event-template-2-text">
                                             <td colspan="2" width="100%"
                                                 style="border: 1px solid #cccccc; border-top: none; border-bottom-left-radius: 1.5rem; border-bottom-right-radius: 1.5rem;">
-                                                <table>
+                                                <table align="center" border="0" cellpadding="0" cellspacing="0"
+                                                    role="presentation" width="100%" style="max-width:644px;">
                                                     <tr>
                                                         <td>
                                                             <h3>
@@ -1318,16 +1333,11 @@
                                                             <p>讓更多人發現您的 foodpanda 商家🤩</p>
                                                         </td>
                                                     </tr>
-                                                </table>
-                                                <table class="event-more" align="center" border="0" cellpadding="0"
-                                                    cellspacing="0" role="presentation" width="100%"
-                                                    style="max-width:644px;">
                                                     <tr>
-                                                        <td align="right">
+                                                        <td align="right" style="padding-top: 1.25rem;">
                                                             <a href="https://www.google.com" target="_blank"
-                                                                class="main-btn">
-                                                                <img src="https://lh3.googleusercontent.com/Tumv520cjtQX9Mv36LaD_gy5GD_Vfeevl_VjEX4BngTqZPLqflZE3_AZf8EHtOLDe3v7dVLiBElSLdVU729IBiWA_lKM99L8DB1jyu1GMydLs06sSfIN5Q8f0MZ7oUK43dlIeDKIQg=w400"
-                                                                    alt="">
+                                                                class="main-btn primary-btn">
+                                                                <p>馬上參加</p>
                                                             </a>
                                                         </td>
                                                     </tr>
@@ -1367,15 +1377,13 @@
                                                         </td>
                                                     </tr>
                                                 </table>
-                                                <table class="event-more" align="center" border="0" cellpadding="0"
-                                                    cellspacing="0" role="presentation" width="100%"
-                                                    style="max-width:644px;">
+                                                <table align="center" border="0" cellpadding="0" cellspacing="0"
+                                                    role="presentation" width="100%" style="max-width:644px;">
                                                     <tr>
-                                                        <td align="right">
+                                                        <td align="right" style="padding-top: 1.25rem;">
                                                             <a href="https://www.google.com" target="_blank"
-                                                                class="main-btn">
-                                                                <img src="https://lh3.googleusercontent.com/C0_puowUwZVT9M7mqyS2pCQtIA7LAz7jluav5Dqxr6ddc0F2KWnU_5Q4gF1POCnbS1cFNpSQCdX09ZnbNAVlDABSDet266B1rCP7kR4N_piMQIb6cF129ef7Wx4l7USiBYDAfIHDIQ=w400"
-                                                                    alt="">
+                                                                class="main-btn primary-btn">
+                                                                <p>立即上傳</p>
                                                             </a>
                                                         </td>
                                                     </tr>
@@ -1428,15 +1436,15 @@
                                                                         </td>
                                                                     </tr>
                                                                 </table>
-                                                                <table class="event-more" align="center" border="0"
-                                                                    cellpadding="0" cellspacing="0" role="presentation"
-                                                                    width="100%" style="max-width:644px;">
+                                                                <table align="center" border="0" cellpadding="0"
+                                                                    cellspacing="0" role="presentation" width="100%"
+                                                                    style="max-width:644px;">
                                                                     <tr>
-                                                                        <td align="right">
+                                                                        <td align="right" style="padding-top: 1.25rem;">
                                                                             <a href="https://www.google.com"
-                                                                                target="_blank" class="main-btn">
-                                                                                <img src="https://lh3.googleusercontent.com/C0_puowUwZVT9M7mqyS2pCQtIA7LAz7jluav5Dqxr6ddc0F2KWnU_5Q4gF1POCnbS1cFNpSQCdX09ZnbNAVlDABSDet266B1rCP7kR4N_piMQIb6cF129ef7Wx4l7USiBYDAfIHDIQ=w400"
-                                                                                    alt="">
+                                                                                target="_blank"
+                                                                                class="main-btn primary-btn detail-btn">
+                                                                                <p>立即上傳</p>
                                                                             </a>
                                                                         </td>
                                                                     </tr>
