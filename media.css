@@ -7,7 +7,22 @@
     padding: 1rem 2.5rem;
   }
 
-  .shop-action {
-    padding-bottom: 4.75rem;
+  .content-wrapper-1-mobile {
+    display: none;
+  }
+  
+  .content-wrapper-1-desktop {
+    display: table !important;
+    padding-bottom: 2rem;
+  }
+
+  .text-box {
+    padding-left: 2rem;
+    padding-right: 0;
+  }
+
+  .text-box-reverse {
+    padding-left: 0;
+    padding-right: 2rem;
   }
 }
