@@ -3,87 +3,11 @@
     max-width: 700px;
   }
 
-  .nav {
-    height: 5rem;
+  .section-container-1 > table:first-child {
+    padding: 1rem 2.5rem;
   }
 
-  .nav-logo > img {
-    width: 177px;
-  }
-
-  .banner-image {
-    padding: 2.5rem;
-    padding-bottom: 0;
-  }
-
-  .section-content > table {
-    padding-bottom: 1.25rem;
-  }
-
-  .next-section-content > table {
-    padding-bottom: 0;
-  }
-
-  .step-wrapper-mobile {
-    display: none;
-  }
-
-  .step-wrapper-desktop {
-    display: table !important;
-    padding: 1.25rem 2.5rem;
-    padding-top: 0;
-  }
-
-  .step-wrapper-desktop img {
-    border: 6px solid #ff2b85;
-  }
-
-  .step-wrapper-desktop h3 {
-    white-space: nowrap;
-    color: #ff2b85;
-    font-size: 1.5rem;
-    font-weight: 700;
-    line-height: 1.75rem;
-    margin-bottom: 0.5rem !important;
-  }
-
-  .step-wrapper-desktop td > p {
-    padding-bottom: 0.75rem !important;
-    font-size: 0.75rem;
-  }
-
-  .step-wrapper-desktop p > span {
-    color: #ff2b85;
-  }
-
-  .next-wrapper-mobile {
-    display: none;
-  }
-
-  .next-wrapper-desktop {
-    display: table !important;
-    padding: 2.5rem;
-  }
-
-  .next-wrapper-desktop img {
-    border-radius: 1.5rem;
-  }
-
-  .next-wrapper-desktop h3 {
-    white-space: nowrap;
-    color: #ff2b85;
-    font-size: 1.5rem;
-    font-weight: 700;
-    line-height: 1.75rem;
-    margin-bottom: 0.5rem !important;
-  }
-
-  .next-wrapper-desktop td > p {
-    line-height: 1.2rem;
-    font-size: 0.75rem;
-  }
-
-  .next-wrapper-desktop p > span {
-    color: #ff2b85;
+  .shop-action {
+    padding-bottom: 4.75rem;
   }
 }
