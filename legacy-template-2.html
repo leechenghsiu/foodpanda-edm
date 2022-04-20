@@ -1,0 +1,785 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foodpanda eDM Mar. Template 2</title>
+    <style>
+        /* Normalized CSS */
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            outline: none;
+        }
+
+        body,
+        input,
+        select,
+        textarea,
+        button {
+            -webkit-font-smoothing: antialiased;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: #000000;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            border-collapse: separate;
+            border: none;
+        }
+
+        img {
+            display: block;
+            height: auto;
+            max-width: 100% !important;
+        }
+
+        .container {
+            width: 100%;
+            margin: auto;
+        }
+
+        .main-btn {
+            display: inline-block;
+            border-radius: 1.5rem;
+            height: 2rem;
+            padding: 0.5rem 1.25rem;
+        }
+
+        .main-btn>p {
+            color: #ffffff;
+            font-size: 1rem;
+            line-height: 1;
+            font-weight: 500;
+        }
+
+        .secondary-btn {
+            background-color: #e673a3;
+        }
+
+        .section-wrapper-1 {
+            padding: 0;
+            padding-bottom: 1rem;
+        }
+
+        .section-container-1 {
+            background-color: #ffffff;
+            border-radius: 1.5rem;
+            margin: auto;
+        }
+
+        .section-container-1>table:first-child {
+            border-bottom: 1px solid #eff2f4;
+        }
+
+        .nav {
+            height: 4rem;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .nav-logo {
+            width: 50%;
+        }
+
+        .nav-logo>img {
+            width: 120px;
+        }
+
+        .nav-text p {
+            color: #ff2b85;
+            font-weight: 500;
+        }
+
+        .nav-text span {
+            color: #595757;
+            font-size: 0.75rem;
+        }
+
+        .nav-hint p {
+            display: inline;
+            color: #1367e2;
+            font-weight: 500;
+            padding: 0.5rem;
+            height: 42px;
+        }
+
+        .section-wrapper-2 {
+            background-color: #ff2b85;
+            margin: auto;
+        }
+
+        .section-wrapper-2>table {
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            padding: 2.5rem 0 0;
+        }
+
+        .section-title {
+            padding: 0 1.5rem;
+        }
+
+        .section-title h1 {
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        .section-title h4 {
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        .section-content {
+            padding: 0 1.5rem;
+        }
+
+        .banner-image {
+            margin-bottom: 2rem;
+            padding: 1.25rem;
+            padding-bottom: 0;
+        }
+
+        .banner-image span[id='banner'] {
+            display: block;
+            background-image: url(https://images.unsplash.com/photo-1648854055715-c53aa7531f14?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80) !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+            background-size: cover;
+            width: 100% !important;
+            height: calc((100vw - 56px * 2) * 0.636) !important;
+            max-height: 374px;
+            border-radius: 1.5rem;
+        }
+
+        .banner-image img[id='banner'] {
+            display: none !important;
+        }
+
+        .section-sub-title {
+            padding: 2.5rem 0;
+        }
+
+        .section-sub-title>h3 {
+            color: #231f20;
+            font-size: 1.25rem;
+            font-weight: 400;
+            padding: 0 1.25rem;
+        }
+
+        .step-wrapper-mobile {
+            padding: 1.25rem;
+            padding-top: 0;
+        }
+
+        .step-wrapper-mobile span[id='step-1'] {
+            display: block;
+            background-image: url(https://images.unsplash.com/photo-1648838449733-28f3348232e3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80) !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+            background-size: cover;
+            width: 100% !important;
+            height: calc((100vw - 2.5rem) * 0.66) !important;
+            max-height: 330px;
+            border: 6px solid #ff2b85;
+        }
+
+        .step-wrapper-mobile img[id='step-1'] {
+            display: none !important;
+        }
+
+        .step-wrapper-mobile span[id='step-2'] {
+            display: block;
+            background-image: url(https://images.unsplash.com/photo-1648881280166-b636b291ff82?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80) !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+            background-size: cover;
+            width: 100% !important;
+            height: calc((100vw - 2.5rem) * 0.66) !important;
+            max-height: 330px;
+            border: 6px solid #ff2b85;
+        }
+
+        .step-wrapper-mobile img[id='step-2'] {
+            display: none !important;
+        }
+
+        .step-wrapper-mobile span[id='step-3'] {
+            display: block;
+            background-image: url(https://images.unsplash.com/photo-1628574373473-4ecec7cfce93?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80) !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+            background-size: cover;
+            width: 100% !important;
+            height: calc((100vw - 2.5rem) * 0.66) !important;
+            max-height: 330px;
+            border: 6px solid #ff2b85;
+        }
+
+        .step-wrapper-mobile img[id='step-3'] {
+            display: none !important;
+        }
+
+        .step-wrapper-mobile h3 {
+            color: #ff2b85;
+            font-size: 1.5rem;
+            font-weight: 700;
+            padding-top: 0.75rem;
+        }
+
+        .step-wrapper-mobile td>p {
+            padding-bottom: 0.75rem;
+        }
+
+        .step-wrapper-mobile p>span {
+            color: #ff2b85;
+        }
+
+        .step-wrapper-desktop {
+            display: none;
+        }
+
+        .next-wrapper-mobile {
+            padding: 1.25rem;
+        }
+
+        .next-wrapper-mobile span[id='next'] {
+            display: block;
+            background-image: url(https://images.unsplash.com/photo-1648831570487-9c2ab7131739?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1542&q=80) !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+            background-size: cover;
+            width: 100% !important;
+            height: calc((100vw - 2.5rem) * 0.66) !important;
+            max-height: 330px;
+            border-radius: 1.5rem;
+        }
+
+        .next-wrapper-mobile img[id='next'] {
+            display: none !important;
+        }
+
+        .next-wrapper-mobile h3 {
+            color: #ff2b85;
+            font-size: 1.5rem;
+            font-weight: 700;
+            padding-top: 0.75rem;
+        }
+
+        .next-wrapper-mobile td>p {
+            padding-bottom: 0.75rem;
+        }
+
+        .next-wrapper-mobile p>span {
+            color: #ff2b85;
+        }
+
+        .next-wrapper-desktop {
+            display: none;
+        }
+
+        .note {
+            padding: 2rem 0;
+        }
+
+        .note>p {
+            color: white;
+        }
+
+        @media screen and (min-width: 600px),
+        screen and (min-device-width: 600px) {
+            .container {
+                max-width: 700px;
+            }
+
+            .nav {
+                height: 5rem;
+            }
+
+            .nav-logo>img {
+                width: 177px;
+            }
+
+            .banner-image {
+                padding: 2.5rem;
+                padding-bottom: 0;
+            }
+
+            .section-content {
+                padding: 0 2.5rem;
+            }
+
+            .section-title {
+                padding: 0 2.5rem;
+            }
+
+            .section-content>table {
+                padding-bottom: 1.25rem;
+            }
+
+            .next-section-content>table {
+                padding-bottom: 0;
+            }
+
+            .step-wrapper-mobile {
+                display: none;
+            }
+
+            .step-wrapper-desktop {
+                display: table !important;
+                padding: 1.25rem 2.5rem;
+                padding-top: 0;
+            }
+
+            .step-wrapper-desktop img {
+                border: 6px solid #ff2b85;
+            }
+
+            .step-wrapper-desktop h3 {
+                color: #ff2b85;
+                font-size: 1.5rem;
+                font-weight: 700;
+                line-height: 1.75rem;
+                margin-bottom: 0.5rem !important;
+            }
+
+            .step-wrapper-desktop td>p {
+                padding-bottom: 0.75rem !important;
+                font-size: 0.75rem;
+            }
+
+            .step-wrapper-desktop p>span {
+                color: #ff2b85;
+            }
+
+            .next-wrapper-mobile {
+                display: none;
+            }
+
+            .next-wrapper-desktop {
+                display: table !important;
+                padding: 2.5rem;
+            }
+
+            .next-wrapper-desktop img {
+                border-radius: 1.5rem;
+            }
+
+            .next-wrapper-desktop h3 {
+                color: #ff2b85;
+                font-size: 1.5rem;
+                font-weight: 700;
+                line-height: 1.75rem;
+                margin-bottom: 0.5rem !important;
+            }
+
+            .next-wrapper-desktop td>p {
+                line-height: 1.2rem;
+                font-size: 0.75rem;
+            }
+
+            .next-wrapper-desktop p>span {
+                color: #ff2b85;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+        <!-- First Section -->
+        <tr>
+            <td>
+                <div class="container">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                        <tr>
+                            <td>
+                                <div class="section-wrapper-1">
+                                    <div class="section-container-1">
+                                        <!-- 導覽列 -->
+                                        <table align="center" border="0" cellpadding="0" cellspacing="0"
+                                            role="presentation" width="100%" style="max-width:700px;">
+                                            <tr class="nav">
+                                                <td class="nav-logo" align="center">
+                                                    <img src="https://lh3.googleusercontent.com/G2Q38FuSa5XrxBIGY1WbDDvNUcJXaXGTkaDPSl7mD3s3inH7p1zc--MYwTMLjr99SjPYG_E_zHF4Yzfq-WI4fHATUURl70R64PGJR4KesmXGeGOyeny23VujwCYhcgNQ8xpprezljQ=w600"
+                                                        alt="">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- 導覽列文字 -->
+                                        <table align="center" border="0" cellpadding="0" cellspacing="0"
+                                            role="presentation" width="100%" style="max-width:700px; padding: 1rem;">
+                                            <tr class="nav-text">
+                                                <td align="center" style="padding-bottom: 1rem;">
+                                                    <a href="https://www.google.com" target="_blank">
+                                                        <p style="text-decoration: underline">現正熱映:【胖達快報：疫情時代】</p>
+                                                        <span>落實防疫三要點，foodpanda 與您疫起加油!</span>
+                                                    </a>
+                                                </td>
+                                                <td align="center" style="padding-bottom: 1rem;">
+                                                    <a href="https://www.google.com" target="_blank">
+                                                        <p style="text-decoration: underline">YouTube 教學小教室</p>
+                                                        <span>商家實用技，手把手教學都在這!</span>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr class="nav-hint">
+                                                <td align="center" colspan="2"
+                                                    style="border: 1px solid #1367e2; padding: 0.25rem;">
+                                                    <a href="https://www.google.com" target="_blank">
+                                                        <p>
+                                                            您有胖胖達嗎? 立即申請新版商家圓形門貼，讓胖胖達出現在您的商家
+                                                        </p>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+        <!-- Second Section -->
+        <tr>
+            <td>
+                <div class="container">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                        <tr>
+                            <td>
+                                <div class="section-wrapper-2">
+                                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
+                                        width="100%" style="max-width:700px;">
+                                        <tr>
+                                            <td class="section-title">
+                                                <table width="100%">
+                                                    <tr>
+                                                        <td>
+                                                            <h1>foodpanda 商家講座</h1>
+                                                            <h4>2022.02.25_ 商家平台攻略指南</h4>
+                                                        </td>
+                                                        <td align="right" style="vertical-align: bottom;">
+                                                            <img src="https://lh3.googleusercontent.com/YqO4lFPYSJak_U10TekAiY3uLNwSmuY7w9oPHln7tNodThJSCGqil2kGskps4lRE79mMeC1AelhkKtthOSLuxLEddQOcM8e6UK_3LjnskzNKO3FtKuS9hMfJCUxlexTFMPVrRbivZQ=w400"
+                                                                alt="" width="100%" style="max-width: 200px;">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="section-content" style="padding-bottom: 2rem">
+                                                <table align="center" border="0" cellpadding="0" cellspacing="0"
+                                                    role="presentation" width="100%"
+                                                    style="background: white; border-radius: 2.5rem;">
+                                                    <tr>
+                                                        <td class="banner-image" colspan="2" width="100%">
+                                                            <span id="banner">
+                                                                <img id="banner"
+                                                                    src="https://images.unsplash.com/photo-1648854055715-c53aa7531f14?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
+                                                                    alt="">
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="center" class="section-sub-title">
+                                                            <h3>營業時間設定、商家訂單報告、菜單修改，</h3>
+                                                            <h3>來這裡通通辦得到!?</h3>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- Step1 Mobile -->
+                                                    <tr>
+                                                        <td class="step-wrapper-mobile">
+                                                            <table width="100%">
+                                                                <tr>
+                                                                    <td>
+                                                                        <span id="step-1">
+                                                                            <img id="step-1"
+                                                                                src="https://images.unsplash.com/photo-1648838449733-28f3348232e3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                                                                                alt="">
+                                                                        </span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <h3>臨時調整營業時間</h3>
+                                                                        <p>
+                                                                            <span>跨日宵夜</span>的營業時間，透過【營業時間】來設定，可立即更新於
+                                                                            foodpanda
+                                                                            訂餐平台!
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="padding-bottom: 1rem">
+                                                                        <a href="https://www.google.com" target="_blank"
+                                                                            class="main-btn secondary-btn">
+                                                                            <p>馬上更新</p>
+                                                                        </a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- Step1 Desktop -->
+                                                    <tr>
+                                                        <td class="step-wrapper-desktop">
+                                                            <table width="100%">
+                                                                <tr>
+                                                                    <td>
+                                                                        <img id="step-1"
+                                                                            src="https://images.unsplash.com/photo-1648838449733-28f3348232e3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                                                                            alt="" width="200" height="137">
+                                                                    </td>
+                                                                    <td style="padding-left: 1rem">
+                                                                        <h3>臨時調整營業時間</h3>
+                                                                        <p>
+                                                                            <span>跨日宵夜</span>的營業時間，透過【營業時間】來設定，可立即更新於
+                                                                            foodpanda
+                                                                            訂餐平台!
+                                                                        </p>
+                                                                        <a href="https://www.google.com" target="_blank"
+                                                                            class="main-btn secondary-btn">
+                                                                            <p>馬上更新</p>
+                                                                        </a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- Step2 Mobile -->
+                                                    <tr>
+                                                        <td class="step-wrapper-mobile">
+                                                            <table width="100%">
+                                                                <tr>
+                                                                    <td>
+                                                                        <span id="step-2">
+                                                                            <img id="step-2"
+                                                                                src="https://images.unsplash.com/photo-1648881280166-b636b291ff82?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80"
+                                                                                alt="">
+                                                                        </span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <h3>想即時追蹤您的商家營收?</h3>
+                                                                        <p>
+                                                                            【餐廳表現】可依商家需求，查詢不同區間的營業報告，提供專業的營運分析!
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="padding-bottom: 1rem">
+                                                                        <a href="https://www.google.com" target="_blank"
+                                                                            class="main-btn secondary-btn">
+                                                                            <p>馬上更新</p>
+                                                                        </a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- Step2 Desktop -->
+                                                    <tr>
+                                                        <td class="step-wrapper-desktop">
+                                                            <table width="100%">
+                                                                <tr>
+                                                                    <td>
+                                                                        <img id="step-2"
+                                                                            src="https://images.unsplash.com/photo-1648881280166-b636b291ff82?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80"
+                                                                            alt="" width="200" height="137">
+                                                                    </td>
+                                                                    <td style="padding-left: 1rem">
+                                                                        <h3>想即時追蹤您的商家營收?</h3>
+                                                                        <p>
+                                                                            【餐廳表現】可依商家需求，查詢不同區間的營業報告，提供專業的營運分析!
+                                                                        </p>
+                                                                        <a href="https://www.google.com" target="_blank"
+                                                                            class="main-btn secondary-btn">
+                                                                            <p>馬上更新</p>
+                                                                        </a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- Step3 Mobile -->
+                                                    <tr>
+                                                        <td class="step-wrapper-mobile">
+                                                            <table width="100%">
+                                                                <tr>
+                                                                    <td>
+                                                                        <span id="step-3">
+                                                                            <img id="step-3"
+                                                                                src="https://images.unsplash.com/photo-1628574373473-4ecec7cfce93?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                                                                                alt="">
+                                                                        </span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <h3>卡! 您的菜單修改又卡關了嗎?</h3>
+                                                                        <p>收看【商家平台攻略指南】，讓您立即晉身菜單達人!</p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="padding-bottom: 1rem">
+                                                                        <a href="https://www.google.com" target="_blank"
+                                                                            class="main-btn secondary-btn">
+                                                                            <p>馬上更新</p>
+                                                                        </a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- Step3 Desktop -->
+                                                    <tr>
+                                                        <td class="step-wrapper-desktop">
+                                                            <table width="100%">
+                                                                <tr>
+                                                                    <td>
+                                                                        <img id="step-3"
+                                                                            src="https://images.unsplash.com/photo-1628574373473-4ecec7cfce93?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                                                                            alt="" width="200" height="137">
+                                                                    </td>
+                                                                    <td style="padding-left: 1rem">
+                                                                        <h3>卡! 您的菜單修改又卡關了嗎?</h3>
+                                                                        <p>收看【商家平台攻略指南】，讓您立即晉身菜單達人!</p>
+                                                                        <a href="https://www.google.com" target="_blank"
+                                                                            class="main-btn secondary-btn">
+                                                                            <p>馬上更新</p>
+                                                                        </a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="section-content next-section-content">
+                                                <table align="center" border="0" cellpadding="0" cellspacing="0"
+                                                    role="presentation" width="100%"
+                                                    style="background: white; border-radius: 2.5rem;">
+                                                    <!-- Next Mobile -->
+                                                    <tr>
+                                                        <td class="next-wrapper-mobile">
+                                                            <table width="100%">
+                                                                <tr>
+                                                                    <td>
+                                                                        <span id="next">
+                                                                            <img id="next"
+                                                                                src="https://images.unsplash.com/photo-1648831570487-9c2ab7131739?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1542&q=80"
+                                                                                alt="">
+                                                                        </span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <h3>臨時調整營業時間</h3>
+                                                                        <p>
+                                                                            提升能見度! 增加訂單量!
+                                                                            <span>foodpanda 廣告曝光</span>有哪些?
+                                                                            對於它們還是傻傻分不清楚?
+                                                                            2022.03.21(一) 線上開課來講解!
+                                                                        </p>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="padding-bottom: 1rem">
+                                                                        <a href="https://www.google.com" target="_blank"
+                                                                            class="main-btn secondary-btn">
+                                                                            <p>馬上更新</p>
+                                                                        </a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- Next Desktop -->
+                                                    <tr>
+                                                        <td class="next-wrapper-desktop">
+                                                            <table width="100%">
+                                                                <tr>
+                                                                    <td>
+                                                                        <img id="next"
+                                                                            src="https://images.unsplash.com/photo-1648831570487-9c2ab7131739?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1542&q=80"
+                                                                            alt="" width="200" height="137">
+                                                                    </td>
+                                                                    <td style="padding-left: 1rem">
+                                                                        <h3>下集預告｜2022.03.21</h3>
+                                                                        <p>提升能見度! 增加訂單量!</p>
+                                                                        <p><span>foodpanda 廣告曝光</span>有哪些?</p>
+                                                                        <p>對於它們還是傻傻分不清楚?</p>
+                                                                        <p style="padding-bottom: 0.75rem">2022.03.21(一)
+                                                                            線上開課來講解!</p>
+                                                                        <a href="https://www.google.com" target="_blank"
+                                                                            class="main-btn secondary-btn">
+                                                                            <p>馬上更新</p>
+                                                                        </a>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="note" align="center">
+                                                <p>鎖定 foodpanda 商家講座，</p>
+                                                <p>即時接收最新平台資訊，詳解商家教學</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+        <!-- Empty Section -->
+        <tr>
+            <td>
+                <div class="container">
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
