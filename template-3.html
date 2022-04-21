@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <meta name="x-apple-disable-message-reformatting">
+    <title>Foodpanda eDM Mar. Template 3</title>
+    <!--[if mso]>
+    <style>
+        table {border-collapse:collapse;border-spacing:0;border:none;margin:0;}
+        div, td {padding:0;}
+        div {margin:0 !important;}
+    </style>
+    <noscript>
+        <xml>
+        <o:OfficeDocumentSettings>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+        </xml>
+    </noscript>
+    <![endif]-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+
+        /* Normalized CSS */
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            outline: none;
+        }
+
+        body,
+        input,
+        select,
+        textarea,
+        button {
+            -webkit-font-smoothing: antialiased;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: #000000;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            border-collapse: separate;
+            border: none;
+        }
+
+        td {
+            padding: 0;
+        }
+
+        /* Smaller than 600px */
+        @media screen and (max-width: 600px) {
+            .col-sml {
+                max-width: 100% !important;
+            }
+
+            .col-sml>img {
+                width: 100% !important;
+                border-radius: 2.5vmin !important;
+            }
+
+            .col-lge {
+                padding-top: 5% !important;
+                max-width: 100% !important;
+            }
+
+            .col-sml-radius {
+                height: auto !important;
+                border-top-left-radius: 2.5vmin !important;
+                border-top-right-radius: 2.5vmin !important;
+            }
+
+            .col-sml-radius img {
+                width: auto !important;
+                height: 128px !important;
+            }
+
+            .col-lge-radius {
+                padding-top: 0 !important;
+            }
+
+            .col-sml-normal {
+                max-width: 60% !important;
+            }
+
+            .col-lge-normal {
+                max-width: 40% !important;
+            }
+
+            .col-lge-normal img {
+                width: auto !important;
+                height: 128px !important;
+            }
+
+            .col-1-2 {
+                max-width: 100% !important;
+            }
+
+            .col-1-2-normal {
+                max-width: 50% !important;
+            }
+
+            .col-1-2-normal>table {
+                padding: 10% !important;
+            }
+
+            .title {
+                font-size: 24px !important;
+                line-height: 32px !important;
+            }
+
+            .nav-link {
+                font-size: 12px !important;
+                line-height: 1 !important;
+            }
+
+            .price-1 {
+                padding-right: 12px;
+                font-size: 20px;
+                line-height: 20px;
+            }
+
+            .price-2 {
+                font-size: 32px;
+                line-height: 28px;
+            }
+
+            .price-3 {
+                font-size: 12px;
+                line-height: 12px;
+            }
+
+            .price-4 {
+                padding-left: 12px;
+                line-height: 16px;
+            }
+        }
+
+        /* Larger than 600px */
+        @media screen and (min-width: 601px) {
+            .col-sml {
+                max-width: 40% !important;
+            }
+
+            .col-lge {
+                max-width: 60% !important;
+            }
+
+            .col-sml-radius {
+                border-top-left-radius: 2.5vmin !important;
+                border-bottom-left-radius: 2.5vmin !important;
+            }
+
+            .col-sml-normal {
+                max-width: 60% !important;
+            }
+
+            .col-lge-normal {
+                max-width: 40% !important;
+            }
+
+            .col-lge-normal img {
+                width: auto !important;
+                height: 128px !important;
+            }
+
+            .col-1-2 {
+                max-width: 50% !important;
+                padding-bottom: 0 !important;
+            }
+
+            .col-1-2-normal {
+                max-width: 50% !important;
+            }
+
+            .title {
+                font-size: 32px !important;
+                line-height: 36px !important;
+            }
+
+            .nav-link {
+                font-size: 16px !important;
+            }
+
+            .price-1 {
+                padding-right: 20px;
+                font-size: 32px;
+                line-height: 32px;
+            }
+
+            .price-2 {
+                font-size: 48px;
+                line-height: 40px;
+            }
+
+            .price-3 {
+                font-size: 24px;
+                line-height: 16px;
+            }
+
+            .price-4 {
+                padding-left: 20px;
+                line-height: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body style="margin:0;padding:0;word-spacing:normal;">
+    <div role="article" aria-roledescription="email"
+        style="text-size-adjust:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;">
+        <table role="presentation" style="width:100%;border:none;border-spacing:0;">
+            <tr>
+                <td align="center" style="padding:0;">
+                    <!--[if mso]>
+                    <table role="presentation" align="center" style="width:600px;">
+                    <tr>
+                    <td>
+                    <![endif]-->
+                    <table role="presentation"
+                        style="width:100%;max-width:700px;border:none;border-spacing:0;text-align:center;font-family:Noto Sans TC,sans-serif;font-size:16px;line-height:22px;color:#363636;">
+                        <tr>
+                            <td>
+                                <table role="presentation"
+                                    style="width:100%;max-width:700px;border:none;border-spacing:0;text-align:center;background-color:#ff2b85;">
+                                    <tr>
+                                        <td style="padding:2.5% 5%;width:50%;text-align:left;">
+                                            <img src="https://lh3.googleusercontent.com/nKljD5rDe-6_lir_y6u_mdqL77mpVPFib2CjI8I3oG_rwtxbjf4iZFw8xll7CeVr2o5zPbqZN3QJJ5wzraRL6hrbjbdtqAuzkPAuS4b8y6B8qDpC8RMuXcT1YN3fwvMu0B-ycbAPnQ=w600"
+                                                height="48" alt="Logo" style="display:block;height:48px;width:auto;">
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table role="presentation"
+                                    style="width:100%;max-width:700px;border:none;border-spacing:0;text-align:center;padding:2.5%;">
+                                    <tr>
+                                        <td align="center">
+                                            <a class="nav-link" href="https://www.google.com" target="_blank"
+                                                style="color:#ff2b85;font-weight:500;">
+                                                熱銷商品
+                                            </a>
+                                        </td>
+                                        <td align="center">
+                                            <a class="nav-link" href="https://www.google.com" target="_blank"
+                                                style="color:#ff2b85;font-weight:500;">
+                                                官方商品
+                                            </a>
+                                        </td>
+                                        <td align="center">
+                                            <a class="nav-link" href="https://www.google.com" target="_blank"
+                                                style="color:#ff2b85;font-weight:500;">
+                                                商家用品
+                                            </a>
+                                        </td>
+                                        <td align="center">
+                                            <a class="nav-link" href="https://www.google.com" target="_blank"
+                                                style="color:#ff2b85;font-weight:500;">
+                                                食品雜貨
+                                            </a>
+                                        </td>
+                                        <td align="center">
+                                            <a class="nav-link" href="https://www.google.com" target="_blank"
+                                                style="color:#ff2b85;font-weight:500;">
+                                                商家服務
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table role="presentation"
+                                    style="width:100%;max-width:700px;border:none;border-spacing:0;text-align:center;">
+                                    <tr>
+                                        <td>
+                                            <img src="https://lh3.googleusercontent.com/Rl0DeVgDFVJhyNbNEP-v-0dRIWUm9vOJXD52QbA0JPQajQZep-esXzs74oSQOnH-elnd6fLGIPx-_s_14TIG5PK1CrNMfu6-I96hO1OxxpuXr9XuVvYmAJZ9s5c4lq46TZi-7wUueQ=w800"
+                                                width="562" alt=""
+                                                style="display:block;width:100%;height:auto;margin:auto;">
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table role="presentation"
+                                    style="width:100%;max-width:700px;border:none;border-spacing:0;text-align:center;padding:5%;background-color:#eff2f4;">
+                                    <tr>
+                                        <td>
+                                            <h3 style="font-size:28px;font-weight:800;color:#ff2b85;">暢銷組合包，</h3>
+                                            <h3 style="font-size:28px;font-weight:800;color:#ff2b85;">三種品項一次滿足</h3>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="https://lh3.googleusercontent.com/gKzhsJaiBKr88WYZzlAZ5rG363N9BUD2Q4iP2F1eeyZneLtgCKJpybB7yayCFZl95p3ccOdxR8Ea9hP0--Mvwe2HCsx3wJXpUhIa_lid2GwqMOk5a4HwAbu81kq0swFDn7wog6ZJlA=w400"
+                                                width="400" alt=""
+                                                style="display:block;width:70%;height:auto;margin:auto;padding:5% 0;">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <table role="presentation"
+                                                style="width:100%;max-width:700px;border:none;border-spacing:0;text-align:center;">
+                                                <tr>
+                                                    <td
+                                                        style="font-size:0;border-top-left-radius:2.5vmin;border-top-right-radius:2.5vmin;background-color:#ff2b85;padding:10px;">
+                                                        <h3 style="font-size:24px;font-weight:500;color:#ffffff;">
+                                                            胖達人氣熱銷組
+                                                        </h3>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background-color:#ffffff;padding:5%;">
+                                                        <p>
+                                                            現在購買胖達人氣熱銷組，限時享<span
+                                                                style="color:#ff2b85;">65</span>折，外加<span
+                                                                style="color:#ff2b85;">全館免運</span>
+                                                        </p>
+                                                        <p>
+                                                            只要<span style="color:#ff2b85;">$599</span>就能宅配到您手上!
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td
+                                                        style="background-color:#ffffff;border-bottom-left-radius:2.5vmin;border-bottom-right-radius:2.5vmin;padding-bottom:5%;">
+                                                        <div style="display:inline-block;vertical-align:bottom;">
+                                                            <span class="price-1"
+                                                                style="color:#ff2b85;white-space:nowrap;">65折</span>
+                                                        </div>
+                                                        <div style="display:inline-block;vertical-align:bottom;">
+                                                            <span class="price-2" style="font-weight:500;">
+                                                                $599
+                                                            </span>
+                                                        </div>
+                                                        <div style="display:inline-block;vertical-align:bottom;">
+                                                            <span class="price-3" style="font-weight:500;">元</span>
+                                                        </div>
+                                                        <div style="display:inline-block;vertical-align:top;">
+                                                            <span class="price-4"
+                                                                style="color:#acacac;text-decoration:line-through;">
+                                                                $920
+                                                            </span>
+                                                        </div>
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding:5%;padding-bottom:0;">
+
+                                                        <a href="https://www.google.com" target="_blank"
+                                                            style="display:inline-block;border-radius:40px;height:56px;padding:12px 40px;background-color:#ff2b85;color:#ffffff;font-size:32px;line-height:32px;font-weight:500;">
+                                                            搶購去
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table role="presentation"
+                                    style="width:100%;max-width:700px;border:none;border-spacing:0;text-align:center;padding:5%;background-color:#eff2f4;">
+                                    <tr>
+                                        <td>
+                                            <h3 style="font-size:28px;font-weight:800;color:#ff2b85;">跟著時尚潮流，</h3>
+                                            <h3 style="font-size:28px;font-weight:800;color:#ff2b85;">讓您的餐點質感 UP UP UP
+                                            </h3>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <img src="https://lh3.googleusercontent.com/zNuAe4teYlU-E8NBDktJ3PhdD8dzvw3HckWRtEploZQ7WQva_UXuaMwZo87w17lm6LkOuICYpKbidczdcvRh3-3C_C9Y4u1zaSHpCj3gXuHxbxJ_Esr39uMtYr_SYJ1MwvyIBdYnsA=w400"
+                                                width="400" alt=""
+                                                style="display:block;width:70%;height:auto;margin:auto;padding:5% 0;">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <table role="presentation"
+                                                style="width:100%;max-width:700px;border:none;border-spacing:0;text-align:center;">
+                                                <tr>
+                                                    <td
+                                                        style="font-size:0;border-top-left-radius:2.5vmin;border-top-right-radius:2.5vmin;background-color:#ff2b85;padding:10px;">
+                                                        <h3 style="font-size:24px;font-weight:500;color:#ffffff;">
+                                                            萬年不敗經典牛皮組
+                                                        </h3>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background-color:#ffffff;padding:5%;">
+                                                        <p>
+                                                            經典牛皮包裝搭配高質感餐具，襯托您的美味餐點。
+                                                        </p>
+                                                        <p>
+                                                            現在購買組合包現折<span style="color:#ff2b85;">$100 元</span>，讓您<span
+                                                                style="color:#ff2b85;">$1,100元</span>就可以擁有
+                                                            高質感包裝品!
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td
+                                                        style="background-color:#ffffff;border-bottom-left-radius:2.5vmin;border-bottom-right-radius:2.5vmin;padding-bottom:5%;">
+                                                        <div style="display:inline-block;vertical-align:bottom;">
+                                                            <span class="price-1"
+                                                                style="color:#ff2b85;white-space:nowrap;">現折$100</span>
+                                                        </div>
+                                                        <div style="display:inline-block;vertical-align:bottom;">
+                                                            <span class="price-2" style="font-weight:500;">
+                                                                $1,100
+                                                            </span>
+                                                        </div>
+                                                        <div style="display:inline-block;vertical-align:bottom;">
+                                                            <span class="price-3" style="font-weight:500;">元</span>
+                                                        </div>
+                                                        <div style="display:inline-block;vertical-align:top;">
+                                                            <span class="price-4"
+                                                                style="color:#acacac;text-decoration:line-through;">
+                                                                $1,200
+                                                            </span>
+                                                        </div>
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding:5%;padding-bottom:0;">
+
+                                                        <a href="https://www.google.com" target="_blank"
+                                                            style="display:inline-block;border-radius:40px;height:56px;padding:12px 40px;background-color:#ff2b85;color:#ffffff;font-size:32px;line-height:32px;font-weight:500;">
+                                                            搶購去
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <!--[if mso]>
+                    </td>
+                    </tr>
+                    </table>
+                    <![endif]-->
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
